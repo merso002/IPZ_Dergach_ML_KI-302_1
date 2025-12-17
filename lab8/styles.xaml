@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  Стиль для кнопок  -->
+    <Style TargetType="Button">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF8C69" Offset="0" />
+                    <!--  Абрикосовий колір на початку  -->
+                    <GradientStop Color="#FF6347" Offset="1" />
+                    <!--  Томатний колір на кінці  -->
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--  Стиль для рамок  -->
+    <Style TargetType="Border">
+        <Setter Property="Background" Value="#F4F4F4" />
+    </Style>
+
+    <!--  Стиль для заголовків/міток  -->
+    <Style TargetType="TextBlock" x:Key="LabelStyle">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#2E4057" />
+        <!--  Більш глибокий синьо-сірий для тексту  -->
+        <Setter Property="Margin" Value="0,0,15,15" />
+        <!--  Простір навколо залишається  -->
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--  Стиль для відображення значень  -->
+    <Style TargetType="TextBlock" x:Key="ValueStyle">
+        <Setter Property="Margin" Value="0,0,0,10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Background" Value="#FAFAFA" />
+        <!--  Світліший сірий фон для значень  -->
+        <Setter Property="Foreground" Value="#34495E" />
+        <!--  Насичений темно-синій для тексту значень  -->
+    </Style>
+
+
+</ResourceDictionary>
